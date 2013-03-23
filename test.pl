@@ -44,9 +44,6 @@ foreach my $f (@$imagefiles) {
 		} elsif ($ext =~ /tiff?/i){			# TIFF
 			print $f->{summery} . "\n";
 			$img = $pdf->image_tiff($f->{file});
-		} elsif ($ext =~ /gif/i){			# GIF
-			print $f->{summery} . "\n";
-			$img = $pdf->image_gif($f->{file});
 		} else {
 		}
 		$pdf->image($img, 40, $y, 1);		# 描画
